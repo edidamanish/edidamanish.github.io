@@ -54,7 +54,7 @@ function drawLegends() {
 }
 
 async function loadMap() {
-  const res = await fetch("../data/us-states.json");
+  const res = await fetch("../biodiversity_customvis/data/us-states.json");
   const mapJson = await res.json();
   map(mapJson);
 }
@@ -70,15 +70,18 @@ function getProjection() {
 
 async function loadSpeciesData() {
   try {
-    const speciesData = await d3.csv("../data/species.csv", function (d) {
-      return {
-        speciesId: d["Species ID"],
-        parkName: d["Park Name"],
-        category: d["Category"],
-        order: d["Order"],
-        family: d["Family"],
-      };
-    });
+    const speciesData = await d3.csv(
+      "../biodiversity_customvis/data/species.csv",
+      function (d) {
+        return {
+          speciesId: d["Species ID"],
+          parkName: d["Park Name"],
+          category: d["Category"],
+          order: d["Order"],
+          family: d["Family"],
+        };
+      }
+    );
 
     const excludedCategoryList = [
       "Vascular Plant",
@@ -831,16 +834,19 @@ function getPlantSpeciesCountScaler() {
 
 async function loadParksData() {
   try {
-    const parkData = await d3.csv("../data/parks.csv", function (d) {
-      return {
-        parkCode: d["Park Code"],
-        parkName: d["Park Name"],
-        states: d["State"].split(", "),
-        acres: +d["Acres"],
-        lat: +d["Latitude"],
-        lon: +d["Longitude"],
-      };
-    });
+    const parkData = await d3.csv(
+      "../biodiversity_customvis/data/parks.csv",
+      function (d) {
+        return {
+          parkCode: d["Park Code"],
+          parkName: d["Park Name"],
+          states: d["State"].split(", "),
+          acres: +d["Acres"],
+          lat: +d["Latitude"],
+          lon: +d["Longitude"],
+        };
+      }
+    );
     parksDataWhole = parkData;
 
     parksByState = parkData.reduce((acc, park) => {
@@ -859,16 +865,19 @@ async function loadParksData() {
 
 async function populateNationalParkCoordinates() {
   try {
-    const parkData = await d3.csv("../data/parks.csv", function (d) {
-      return {
-        parkCode: d["Park Code"],
-        parkName: d["Park Name"],
-        state: d["State"],
-        acres: +d["Acres"],
-        lat: +d["Latitude"],
-        lon: +d["Longitude"],
-      };
-    });
+    const parkData = await d3.csv(
+      "../biodiversity_customvis/data/parks.csv",
+      function (d) {
+        return {
+          parkCode: d["Park Code"],
+          parkName: d["Park Name"],
+          state: d["State"],
+          acres: +d["Acres"],
+          lat: +d["Latitude"],
+          lon: +d["Longitude"],
+        };
+      }
+    );
     const sizeScaler = getAcreSizeScaler(
       parkData,
       MIN_IMAGE_SIZE,

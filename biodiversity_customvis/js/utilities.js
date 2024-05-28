@@ -41,7 +41,7 @@ function mapAcresOnMap(coordinates, scaledImageSize, parkCode) {
     .attr("width", scaledImageSize)
     .attr("height", scaledImageSize)
     .attr("id", parkCode + "_tree")
-    .attr("href", "../images/tree.png")
+    .attr("href", "../biodiversity_customvis/images/tree.png")
     .style("pointer-events", "none")
     .datum({
       lon: coordinates[0],
@@ -396,7 +396,7 @@ function drawAcreLegendSvg(id, imageSize, title, acres) {
 
   svg
     .append("image")
-    .attr("xlink:href", "../images/tree.png")
+    .attr("xlink:href", "../biodiversity_customvis/images/tree.png")
     .attr("width", imageSize * 1.5)
     .attr("height", imageSize)
     .attr("y", 20);

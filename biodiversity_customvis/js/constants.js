@@ -80,16 +80,16 @@ const STATE_ABBREVIATIONS = {
 };
 
 const SPECIES_IMAGES = {
-  Mammal: "../images/bear.png",
-  Bird: "../images/bird.png",
-  Reptile: "../images/reptile.png",
-  Amphibian: "../images/frog.png",
-  Fish: "../images/fish.png",
-  Arachnid: "../images/spider.png",
-  Insect: "../images/bee.png",
-  Invertebrate: "../images/worm.png",
-  Crustacean: "../images/crab.png",
-  Mollusk: "../images/snail.png",
+  Mammal: "../biodiversity_customvis/images/bear.png",
+  Bird: "../biodiversity_customvis/images/bird.png",
+  Reptile: "../biodiversity_customvis/images/reptile.png",
+  Amphibian: "../biodiversity_customvis/images/frog.png",
+  Fish: "../biodiversity_customvis/images/fish.png",
+  Arachnid: "../biodiversity_customvis/images/spider.png",
+  Insect: "../biodiversity_customvis/images/bee.png",
+  Invertebrate: "../biodiversity_customvis/images/worm.png",
+  Crustacean: "../biodiversity_customvis/images/crab.png",
+  Mollusk: "../biodiversity_customvis/images/snail.png",
 };
 
 const OVERLAY_ANIMATION_TIME = 1000;
