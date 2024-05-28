@@ -1,0 +1,133 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework #5: Custom Visualization Design - CSE 578 - Spring 2023</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    <script src="js/main.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/constants.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Schoolbell&v1"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="myContainer">
+      <h1 class="text-center">Homework #5: Custom Visualization Design</h1>
+      <h3 class="text-center">Manish Meher Edida - medida@asu.edu</h3>
+      <hr />
+    </div>
+    <div class="header"><h1>Exploring Bio-diversity in National Parks</h1></div>
+
+    <div class="container">
+      <div id="map" class="map_class">
+        <div id="instruction1" class="intruction_overlay">
+          <div class="intruction_text_box">
+            <button
+              class="close_button"
+              onclick="closeInstructionBox()"
+            ></button>
+            <h5>Click on a State for more details!</h5>
+          </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+        <div id="instruction2" class="intruction_overlay">
+          <div class="intruction_text_box">
+            <button
+              class="close_button"
+              onclick="closeInstructionBox2()"
+            ></button>
+            <h5>Hover or Click on a Flower for more details!</h5>
+            <h5>Click on white space to exit state!</h5>
+          </div>
+        </div>
+        <div id="overlay2" class="overlay"></div>
+        <div id="instruction3" class="intruction_overlay">
+          <div class="intruction_text_box">
+            <button
+              class="close_button"
+              onclick="closeInstructionBox3()"
+            ></button>
+            <h5>Click on white space to go back!</h5>
+          </div>
+        </div>
+        <div id="textbox" class="textbox"></div>
+        <div id="textbox2" class="textbox"></div>
+      </div>
+      <div id="info-center">
+        <div id="general" class="info-div">
+          <p class="info-title" id="info-main-title">USA</p>
+          <p class="info-content" id="info-content">Number of Forests : 0</p>
+        </div>
+        <div id="forests" class="info-div">
+          <p class="info-title">Number of forests</p>
+          <div id="forest-legend" class="info-content"></div>
+        </div>
+        <div id="acres" class="info-div">
+          <p class="info-title">Number of Acres</p>
+          <div class="acre-content">
+            <div class="acre-item" id="min-acre"></div>
+            <div class="acre-item dynamic-acre-item" id="cur-acre"></div>
+            <div class="acre-item" id="max-acre"></div>
+          </div>
+        </div>
+        <div id="plants" class="info-div">
+          <p class="info-title">Plant Species</p>
+          <div class="acre-content">
+            <div class="acre-item" id="min-flower"></div>
+            <div class="acre-item dynamic-acre-item" id="cur-flower"></div>
+            <div class="acre-item" id="max-flower"></div>
+          </div>
+        </div>
+        <div id="animals" class="info-div">
+          <p class="info-title">Animal Species</p>
+          <div id="animal-legend"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content_div">
+      <!-- <h3>Description</h3> -->
+      <p>
+        The visualization offers a unique portrayal of biodiversity within the
+        National Parks of the USA. Across the map, trees are strategically
+        placed to mark the locations of these parks, with the size of each tree
+        corresponding to the size of its respective park. Each state is
+        color-coded to represent the number of national parks it hosts.
+      </br>
+        Upon clicking a state, the visualization zooms in to reveal intricate
+        details of the biodiversity within each national park. Here, the size of
+        a flower denotes the size of the park, while the number of petals
+        reflects the number of plant species inhabiting it. Additionally, a
+        donut chart provides an overview of the distribution of different animal
+        categories within the park.
+    </br>
+        For a deeper dive into the park's biodiversity, further clicking on the
+        flower unveils a bar chart. This chart offers a comprehensive breakdown
+        of species count for each animal category, enhancing our understanding
+        of the park's ecological richness.
+      </p>
+      <p>
+      The marks and channels for the <b>USA Chart</b> are as follows:</br>
+      <b>Marks</b>:
+      Point, State polygons</br> <b>Channels</b>: Tree shape, Color of Polygon, Size of trees, Position of trees</br> <b>Interactions</b>:
+      Individual scales update the information chart on the right when hovered
+      over. Clicking on a state expands it to full view.
+      </p>
+      <p>
+      The marks and channels for the <b>State Chart</b> are as follows:</br>
+      <b>Marks</b>:
+      Ellipse, State Polygon, Segments of Donut</br> <b>Channels</b>: Number of Petals/Ellipses, Size of Flower, Position of Flower, Color of Polygon, Color of Donut segment, Angle of Segment </br> <b>Interactions</b>:
+      Hovering over individual scales updates the information chart on the right, while clicking on a flower decreases the size of the state and reveals a bar chart.
+      </p>
+      <p>
+      The marks and channels for the <b>Bar Chart</b> are as follows:</br>
+      <b>Marks</b>: Points</br> <b>Channels</b>: Color of Animal, Shape of Animal, Size of Animal</p>
+<p>The visualization stands out as a <b>"novel"</b> custom visualization, thanks to its innovative approach to showcasing biodiversity data within National Parks. By ingeniously blending elements like trees, flowers, donut charts, and bar charts, it introduces a fresh and captivating way of conveying intricate information. Notably, the utilization of ellipses in the shape of a flower to signify the number of plant species and petals to denote specific plant species is both creative and distinctive, deviating from conventional data visualization methods. This original concept not only enriches comprehension but also offers a new perspective on park biodiversity, making the visualization truly remarkable.</p>
+    </div>
+  </body>
+</html>

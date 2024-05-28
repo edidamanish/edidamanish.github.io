@@ -1,0 +1,231 @@
+.container {
+  display: flex;
+  border: 2px solid black;
+  min-height: 100vh;
+}
+
+.content_div {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Schoolbell";
+}
+
+.content_div h3 {
+  align-self: center;
+}
+
+path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+#map {
+  background-color: lightblue;
+  flex: 1;
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+#map svg {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  text-align: center;
+  font-family: "Schoolbell";
+  font-size: 20px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.intruction_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#instruction1 {
+  display: flex;
+}
+
+#instruction2 {
+  display: none;
+}
+#instruction3 {
+  display: none;
+}
+
+.intruction_text_box {
+  padding: 30px;
+  background-color: #fff;
+  border: 2px solid black;
+  font-family: "Schoolbell";
+  position: relative;
+}
+
+.close_button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 25px;
+  height: 25px;
+  background: url("../images/cross.png") no-repeat center center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.intruction_text_box h5 {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#overlay.show {
+  display: flex;
+}
+
+#overlay svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+#overlay2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+#textbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  font-family: "Schoolbell";
+  font-size: 30px;
+  z-index: 3;
+}
+
+#textbox2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  font-family: "Schoolbell";
+  font-size: 30px;
+  z-index: 3;
+}
+
+#info-center {
+  width: 25%;
+  border-left: 1px solid black;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#info-center {
+  font-family: "Schoolbell";
+  padding: 20px;
+}
+
+#info-center p {
+  font-family: "Schoolbell";
+}
+
+.info-title {
+  align-self: center;
+  font-size: 16px;
+}
+
+.info-content {
+  align-self: center;
+  font-size: 14px;
+}
+
+.info-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+.info-div .info-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.info-div .info-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.acre-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.acre-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 1;
+  margin: 0 10px;
+  justify-content: center;
+  display: flex;
+}
+
+.dynamic-acre-item {
+  background-color: aqua;
+}
+
+#animal-legend {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p b {
+  font-family: "Schoolbell-bold";
+}
+
+.myContainer {
+  margin: auto;
+}
+.text-center {
+  text-align: center;
+}
